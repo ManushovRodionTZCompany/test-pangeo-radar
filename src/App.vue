@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import FormGenerate from './components/FormGenerate.vue'
+  import FormGenerate from './components/FormGenerate/FormGenerate.vue'
   import BlockTable from './components/BlockTable.vue'
   import BlockChart from './components/BlockChart.vue'
 </script>
@@ -7,7 +7,7 @@
 <template>
   <div class="mt-5 mb-5">
     <BContainer>
-      <FormGenerate />
+      <FormGenerate class="mb-3" />
 
       <BRow>
         <BCol md="6">
