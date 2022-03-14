@@ -1,9 +1,11 @@
-import { TPagination } from '@/types/pagination'
-
 export type TResultItem = {
   id: number
   title: string
   rand: string
+}
+
+export type TPagination = {
+  limit: number
 }
 
 export type TResult = {

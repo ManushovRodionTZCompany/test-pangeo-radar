@@ -70,7 +70,6 @@
         items: generate.getResult(),
         pagination: {
           limit: paginationLimit.value,
-          page: 1,
         },
       }
 
