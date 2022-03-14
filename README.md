@@ -1,11 +1,47 @@
-# Vue 3 + Typescript + Vite
+> Тестовое задание для компании Escalate и Atomicwallet.io (https://pangeoradar.ru/)
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Схематическая картинка того, что должно получиться:
 
-## Recommended IDE Setup
+![Схематическая картинка того, что должно получиться.](docs/assets/tz.jpg)
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+Пример данных:
+```json
+[
+    {"id": 1, "title": "name1", "rand": "apple"},
+    {"id": 2, "title": "name2", "rand": "tomato"},
+    {"id": 3, "title": "name3", "rand": "potato"},
+    {"id": 4, "title": "name4", "rand": "orange"}
+]
+```
 
-## Type Support For `.vue` Imports in TS
+Задача:
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+На странице должны быть отрисованы форма, таблица и график (круговая диограмма).
+
+1. Таблица должна поддерживать сортировку столбцов и пагинацию.
+Кол-во строк в таблице должны задаваться в форме.
+
+2. Форма представленна в виде трех полей:
+
+- Кол-во записей для генерации
+- Кол-во строк на страницу для вывода
+- Перечисленные через запятую слова участвующие при заполнении поля rand в данных
+
+Изменения применяются по кнопке, также нужно отрисовать кнопку сброса значений на дефолтные.
+
+При нажатии на кнопку применения значений, код должен сгенировать рандомные данные согласно указанным значениям и отрисовать их с таблице.
+Диаграмма должна отрисовывать общее кол-во строк для уникальных полей rand в сгенеренных данных.
+
+Задание под звездочкой:
+
+- Предусмотреть валидацию полей
+- Предусмореть экспорт отфильтрованных данных в csv
+- Предусмореть изменение вида диаграммы на стоблчатую
+
+
+Требования к релиазации:
+
+- vuejs 2/3
+- bootstrap
+- любая знакомая библиотека для отрисовки графиков
+- git (результат желательно залить на гитхаб, либо прислать в виде архива, но с наличием истории изменений в виде коммитов)
