@@ -6,3 +6,11 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+import { ChartTypeRegistry as _ChartTypeRegistry } from 'chart.js'
+
+declare module 'chart.js' {
+  interface ChartTypeRegistry {
+    derivedBubble: _ChartTypeRegistry['bubble']
+  }
+}
