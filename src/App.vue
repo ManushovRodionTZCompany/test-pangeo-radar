@@ -5,7 +5,7 @@
 
   import FormGenerate from './components/FormGenerate/FormGenerate.vue'
   import BlockTable from './components/BlockTable/BlockTable.vue'
-  import BlockChart from './components/BlockChart.vue'
+  import BlockChart from './components/BlockChart/BlockChart.vue'
 
   const state = reactive<TState>({
     pagination: { limit: 0 },
@@ -21,14 +21,14 @@
 <template>
   <div class="mt-5 mb-5">
     <BContainer>
-      <FormGenerate class="mb-3" @result="handleResultGenerate" />
+      <FormGenerate class="mb-5" @result="handleResultGenerate" />
 
       <BRow v-if="state.items.length">
         <BCol md="8">
           <BlockTable :pagination="state.pagination" :items="state.items" />
         </BCol>
         <BCol md="4">
-          <BlockChart />
+          <BlockChart :items="state.items" />
         </BCol>
       </BRow>
     </BContainer>
