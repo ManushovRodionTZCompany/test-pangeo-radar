@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { TItem } from '@/types/state'
+  import type { TItem } from './Domain/types'
 
   type TProps = {
     items: TItem[]
