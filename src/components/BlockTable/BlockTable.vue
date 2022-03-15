@@ -7,6 +7,7 @@
 
   import TableTheadCol from './TableTheadCol.vue'
   import TablePagination from './TablePagination.vue'
+  import DownloadCSV from './DownloadCSV.vue'
 
   type TProps = {
     pagination: TPagination
@@ -29,7 +30,6 @@
     const start = paginationPage.value * props.pagination.limit
     const end = start + props.pagination.limit
 
-    console.log(start, end)
     return resultSort.slice(start, end)
   })
 
@@ -82,11 +82,19 @@
       </BTbody>
     </BTableSimple>
 
-    <TablePagination
-      :page="paginationPage"
-      :limit="props.pagination.limit"
-      :count="props.items.length"
-      @update:page="handleUpdatePage"
-    />
+    <BRow>
+      <BCol sm="10">
+        <TablePagination
+          :page="paginationPage"
+          :limit="props.pagination.limit"
+          :count="props.items.length"
+          @update:page="handleUpdatePage"
+        />
+      </BCol>
+
+      <BCol sm="2">
+        <DownloadCSV :items="bodyRows" />
+      </BCol>
+    </BRow>
   </div>
 </template>
