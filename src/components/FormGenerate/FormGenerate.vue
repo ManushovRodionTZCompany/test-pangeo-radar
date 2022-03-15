@@ -63,13 +63,13 @@
   const generate = new Generate(countItems.value)
 
   const handleResult = () => {
-    generate.updateCount(countItems.value)
+    generate.updateCount(+countItems.value)
 
     if (generate.parseText(value.value)) {
       const result: TResult = {
         items: generate.getResult(),
         pagination: {
-          limit: paginationLimit.value,
+          limit: +paginationLimit.value,
         },
       }
 
