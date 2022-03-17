@@ -1,4 +1,4 @@
-> Тестовое задание для компании Escalate и Atomicwallet.io (https://pangeoradar.ru/)
+> Тестовое задание для компании Пангео Радар (https://pangeoradar.ru/)
 
 ## # Задача
 
